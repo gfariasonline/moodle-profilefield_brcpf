@@ -44,6 +44,80 @@ As usual:
 * Uncompress to user/profile/field/brcpf
 * Go to **Notifications**
 
+Migrating data from an old CPF field
+---
+
+If your site already had a custom user profile field storing CPF values
+(for example, a legacy `profilefield_cpf` field, or any plain text field),
+you can migrate that data into a `brcpf` field using the CLI scripts under
+`cli/`. They must be run from the Moodle root.
+
+1. Create the new profile field with type **CPF** in
+   **Site admin > Users > User profile fields** and note its shortname
+   (e.g. `cpf`).
+2. Run the read-only check first — it never writes to the database:
+   ```
+   php user/profile/field/brcpf/cli/check_cpf_migration.php --from=cpf_old --to=cpf
+   ```
+   `--from` is the shortname of the old field, `--to` is the shortname of
+   the new `brcpf` field. It reports whether both fields exist, whether the
+   destination field is really of type `brcpf`, how many records would be
+   migrated, and any conflicts (users who already have a different value in
+   the destination field).
+3. Resolve anything it flags as blocking (missing field, wrong datatype) or
+   worth reviewing (conflicts, values that don't normalize to 11 digits).
+4. Do a dry run of the migration — it only prints what it would do:
+   ```
+   php user/profile/field/brcpf/cli/migrate_cpf.php --from=cpf_old --to=cpf --dry-run
+   ```
+5. Back up your database, then run it for real:
+   ```
+   php user/profile/field/brcpf/cli/migrate_cpf.php --from=cpf_old --to=cpf
+   ```
+   Values are normalized to digits only before being saved, matching what
+   `field.class.php` does when a user submits the profile form.
+
+On a fresh install with no legacy field, none of this is needed — just
+create the profile field with type CPF and it starts empty.
+
+### Migrando dados de um campo CPF antigo
+
+Se o seu site já tinha um campo de perfil customizado guardando CPF (por
+exemplo, um campo antigo do `profilefield_cpf`, ou qualquer campo de texto
+livre), dá pra migrar esses dados para um campo `brcpf` usando os scripts
+CLI em `cli/`. Eles devem ser executados a partir da raiz do Moodle.
+
+1. Crie o novo campo de perfil do tipo **CPF** em
+   **Site admin > Users > User profile fields** e anote o shortname dele
+   (ex: `cpf`).
+2. Rode primeiro a checagem, que é somente leitura e nunca grava nada:
+   ```
+   php user/profile/field/brcpf/cli/check_cpf_migration.php --from=cpf_old --to=cpf
+   ```
+   `--from` é o shortname do campo antigo, `--to` é o shortname do campo
+   `brcpf` novo. Ele reporta se os dois campos existem, se o campo de
+   destino realmente é do tipo `brcpf`, quantos registros seriam migrados
+   e eventuais conflitos (usuários que já têm um valor diferente no campo
+   de destino).
+3. Corrija o que for apontado como bloqueante (campo faltando, tipo
+   errado) ou revise o que for só aviso (conflitos, valores que não têm
+   11 dígitos após normalizar).
+4. Faça um dry-run da migração — ele só mostra o que seria feito, sem
+   gravar nada:
+   ```
+   php user/profile/field/brcpf/cli/migrate_cpf.php --from=cpf_old --to=cpf --dry-run
+   ```
+5. Faça backup do banco e rode de verdade:
+   ```
+   php user/profile/field/brcpf/cli/migrate_cpf.php --from=cpf_old --to=cpf
+   ```
+   Os valores são normalizados para apenas dígitos antes de serem
+   gravados, igual ao que `field.class.php` faz quando o usuário envia o
+   formulário de perfil.
+
+Numa instalação nova, sem campo legado, nada disso é necessário — basta
+criar o campo de perfil do tipo CPF, que já nasce vazio e correto.
+
 Repository and support
 ---
 
