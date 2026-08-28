@@ -14,20 +14,24 @@ For Everyone
 ---
 This plugin was made to add possibility to add CPF field in the user profile form.
 
-Moodle documentation about profilefields -> http://docs.moodle.org/26/en/User_profile_fields
+Moodle documentation about profilefields -> https://docs.moodle.org/en/User_profile_fields
 
 The plugin includes Cleave.js to format the CPF field automatically as
 `999.999.999-99` while the user types.
+CPF validation is enabled by default. It can be disabled in the profile field
+settings when mathematical CPF validation is not required.
 
 Para Brasileiros
 ---
 Como CPF é um padrão brasileiro, a explicação será em português. :)
 Este plugin foi criado para possibilitar a inclusão do campo cpf nos formulários de criação de novos usuários e também na alteração dos dados do usuário.
 
-Documentação de como utilizar os profilefields -> http://docs.moodle.org/26/en/User_profile_fields
+Documentação de como utilizar os profilefields -> https://docs.moodle.org/en/User_profile_fields
 
 O plugin inclui o Cleave.js e formata automaticamente o campo CPF como
 `999.999.999-99` enquanto o usuário digita.
+A validação do CPF vem habilitada por padrão, mas pode ser desabilitada nas
+configurações do campo quando a validação matemática não for necessária.
 
 Installation
 ---
