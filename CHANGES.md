@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.1] - 2026-08-28
+### Fixed
+- `cli/migrate_cpf.php --dry-run` now correctly counts records that would
+  be updated separately from records that would be created, matching the
+  summary shown by a real (non-dry-run) execution.
+
 ## [2.1.0] - 2026-08-28
 ### Added
 - CLI scripts `cli/check_cpf_migration.php` (read-only diagnostic) and

@@ -24,9 +24,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version    = 2026082802;
+$plugin->version    = 2026082803;
 $plugin->requires   = 2024100700;  // Moodle 4.5.
 $plugin->supported  = [405, 502];
 $plugin->component  = 'profilefield_brcpf';
 $plugin->maturity   = MATURITY_STABLE;
-$plugin->release    = '2.1.0';
+$plugin->release    = '2.1.1';
