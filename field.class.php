@@ -17,7 +17,7 @@
 /**
  * CPF profile field class definition.
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,11 +25,11 @@
 /**
  * CPF profile field — renders and validates the CPF input in the user profile form.
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class profile_field_cpf extends profile_field_base {
+class profile_field_brcpf extends profile_field_base {
     /**
      * Adds the CPF text element to the edit form with an AMD-loaded input mask.
      *
@@ -46,7 +46,7 @@ class profile_field_cpf extends profile_field_base {
         );
         $mform->setType($this->inputname, PARAM_TEXT);
 
-        $PAGE->requires->js_call_amd('profilefield_cpf/cpf_mask', 'init', [$this->inputname]);
+        $PAGE->requires->js_call_amd('profilefield_brcpf/cpf_mask', 'init', [$this->inputname]);
     }
 
     /**
@@ -83,13 +83,13 @@ class profile_field_cpf extends profile_field_base {
         }
 
         if ($this->requires_validation() && !$this->validate_cpf($cpf)) {
-            $errors[$this->inputname] = get_string('invalidcpf', 'profilefield_cpf');
+            $errors[$this->inputname] = get_string('invalidcpf', 'profilefield_brcpf');
             return $errors;
         }
 
         $userid = $usernew->id ?? 0;
         if (!$this->cpf_is_unique($cpf, $userid)) {
-            $errors[$this->inputname] = get_string('cpfexists', 'profilefield_cpf');
+            $errors[$this->inputname] = get_string('cpfexists', 'profilefield_brcpf');
         }
 
         return $errors;

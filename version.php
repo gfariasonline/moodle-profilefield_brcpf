@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version metadata for the profilefield_cpf plugin.
+ * Version metadata for the profilefield_brcpf plugin.
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,6 +27,6 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version    = 2026082801;
 $plugin->requires   = 2024100700;  // Moodle 4.5.
 $plugin->supported  = [405, 502];
-$plugin->component  = 'profilefield_cpf';
+$plugin->component  = 'profilefield_brcpf';
 $plugin->maturity   = MATURITY_STABLE;
 $plugin->release    = '2.0.1';

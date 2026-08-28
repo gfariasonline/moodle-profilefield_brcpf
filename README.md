@@ -41,7 +41,7 @@ Installation
 As usual:
 
 * Download the source code (zip or git clone)
-* Uncompress to user/profile/field/cpf
+* Uncompress to user/profile/field/brcpf
 * Go to **Notifications**
 
 Repository and support

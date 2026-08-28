@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'profilefield_cpf', language 'pt_br'.
+ * Strings for component 'profilefield_brcpf', language 'pt_br'.
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

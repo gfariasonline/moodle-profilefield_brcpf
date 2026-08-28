@@ -1,4 +1,4 @@
-@profilefield @profilefield_cpf @javascript
+@profilefield @profilefield_brcpf @javascript
 Feature: CPF profile field masking
   In order to enter a Brazilian CPF reliably
   As a Moodle user

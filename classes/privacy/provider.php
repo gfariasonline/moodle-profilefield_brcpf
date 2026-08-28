@@ -15,14 +15,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Privacy API implementation for the profilefield_cpf plugin.
+ * Privacy API implementation for the profilefield_brcpf plugin.
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace profilefield_cpf\privacy;
+namespace profilefield_brcpf\privacy;
 
 use core_privacy\local\metadata\collection;
 use core_privacy\local\request\approved_contextlist;
@@ -33,7 +33,7 @@ use core_privacy\local\request\userlist;
 /**
  * Privacy provider for CPF values stored in the core user profile subsystem.
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -117,7 +117,7 @@ class provider implements
 
             foreach (static::get_records($user->id) as $record) {
                 \core_privacy\local\request\writer::with_context($context)->export_data([
-                    get_string('pluginname', 'profilefield_cpf'),
+                    get_string('pluginname', 'profilefield_brcpf'),
                 ], (object)[
                     'data' => $record->data,
                 ]);

@@ -17,7 +17,7 @@
 /**
  * CPF profile field definition class.
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,11 +25,11 @@
 /**
  * CPF profile field — administration form definition (shown in the field-settings page).
  *
- * @package   profilefield_cpf
+ * @package   profilefield_brcpf
  * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class profile_define_cpf extends profile_define_base {
+class profile_define_brcpf extends profile_define_base {
     /**
      * Adds the default-value input to the field-settings form.
      *
@@ -39,7 +39,7 @@ class profile_define_cpf extends profile_define_base {
         $form->addElement('text', 'defaultdata', get_string('profiledefaultdata', 'admin'));
         $form->setType('defaultdata', PARAM_TEXT);
 
-        $form->addElement('selectyesno', 'param1', get_string('requirevalidation', 'profilefield_cpf'));
+        $form->addElement('selectyesno', 'param1', get_string('requirevalidation', 'profilefield_brcpf'));
         $form->setDefault('param1', 1);
         $form->setType('param1', PARAM_BOOL);
     }
