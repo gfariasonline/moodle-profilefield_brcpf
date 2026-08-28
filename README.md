@@ -43,6 +43,8 @@ License
 
 It is released as GPL v3.
 
+This project was initially forked from [moodle-profilefield_cpf](https://github.com/willianmano/moodle-profilefield_cpf).
+
 Authors:
 * Thiago Serrao
 
