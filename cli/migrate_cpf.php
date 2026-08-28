@@ -115,10 +115,11 @@ foreach ($sourcedata as $record) {
     if ($options['dry-run']) {
         if ($existing) {
             cli_writeln("  [dry-run] userid {$record->userid}: atualizaria '{$existing->data}' -> '{$normalized}'.");
+            $updated++;
         } else {
             cli_writeln("  [dry-run] userid {$record->userid}: criaria registro com '{$normalized}'.");
+            $migrated++;
         }
-        $migrated++;
         continue;
     }
 
