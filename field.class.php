@@ -30,7 +30,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class profile_field_cpf extends profile_field_base {
-
     /**
      * Adds the CPF text element to the edit form with an AMD-loaded input mask.
      *

@@ -30,7 +30,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class profile_define_cpf extends profile_define_base {
-
     /**
      * Adds the default-value input to the field-settings form.
      *
