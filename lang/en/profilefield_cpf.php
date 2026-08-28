@@ -22,9 +22,13 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['cpfexists']       = 'CPF already exists';
-$string['invalidcpf']      = 'Invalid CPF';
-$string['pluginname']      = 'CPF input';
+$string['cpfexists'] = 'CPF already exists';
+$string['invalidcpf'] = 'Invalid CPF';
+$string['pluginname'] = 'CPF input';
+$string['privacy:metadata'] = 'The CPF profile field stores CPF values in the Moodle user profile subsystem.';
+$string['privacy:metadata:cpf:userid'] = 'The ID of the user whose CPF is stored.';
+$string['privacy:metadata:cpf:fieldid'] = 'The ID of the CPF profile field.';
+$string['privacy:metadata:cpf:data'] = 'The user\'s CPF value.';
+$string['privacy:metadata:cpf:dataformat'] = 'The format used to store the CPF value.';
+$string['privacy:metadata:cpf:tableexplanation'] = 'CPF values entered by users in this profile field.';
 $string['requirevalidation'] = 'Require CPF validation';
-$string['privacy:metadata'] = 'The CPF profile field plugin does not store any personal data itself; '
-                            . 'CPF values are stored by the core user profile subsystem.';

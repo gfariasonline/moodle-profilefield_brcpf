@@ -1,10 +1,12 @@
 CPF Profile Field
 ===
+[![Moodle Plugin CI](https://github.com/gfariasonline/moodle-profilefield_brcpf/actions/workflows/moodle-ci.yml/badge.svg)](https://github.com/gfariasonline/moodle-profilefield_brcpf/actions/workflows/moodle-ci.yml)
+
 This is a CPF field to user profiles into moodle.
 
 Compatibility
 ---
-This plugin supports Moodle 4.5 and higher.
+This plugin supports Moodle 4.5 through 5.2.
 
 The Cadastro de Pessoas Físicas (CPF) – Portuguese for Natural Persons Register – is a number attributed by the Brazilian revenue agency (Receita Federal – Federal Revenue) to both Brazilians and resident aliens who pay taxes or take part, directly or indirectly, in activities that provide revenue for any of the dozens of different types of taxes existing in Brazil.
 
@@ -41,6 +43,15 @@ As usual:
 * Download the source code (zip or git clone)
 * Uncompress to user/profile/field/cpf
 * Go to **Notifications**
+
+Repository and support
+---
+
+Source code: https://github.com/gfariasonline/moodle-profilefield_brcpf
+
+Issue tracker: https://github.com/gfariasonline/moodle-profilefield_brcpf/issues
+
+Moodle documentation: https://docs.moodle.org/en/User_profile_fields
 
 License
 ---
