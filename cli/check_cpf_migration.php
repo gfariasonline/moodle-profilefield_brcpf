@@ -65,6 +65,8 @@ Nao grava nada no banco.
 }
 
 /**
+ * Remove tudo que nao for digito do valor informado.
+ *
  * @param string $cpf
  * @return string
  */
@@ -123,7 +125,8 @@ cli_writeln("Registros em '{$options['to']}':   {$tototal}");
 
 if ($tototal > 0) {
     $warnings[] = "O campo de destino '{$options['to']}' ja tem {$tototal} registro(s). " .
-        "migrate_cpf.php vai ATUALIZAR (sobrescrever) o valor de quem ja tiver dado la, para quem tambem tiver dado em '{$options['from']}'.";
+        "migrate_cpf.php vai ATUALIZAR (sobrescrever) o valor de quem ja tiver dado la, " .
+        "para quem tambem tiver dado em '{$options['from']}'.";
 }
 
 // 3. Qualidade dos dados de origem: vazios, nao numericos, tamanho fora do padrao (11 digitos).
@@ -177,7 +180,8 @@ if ($wronglen) {
     if (count($wronglen) > 20) {
         cli_writeln('    ... e mais ' . (count($wronglen) - 20) . '.');
     }
-    $warnings[] = count($wronglen) . ' registro(s) de origem nao tem 11 digitos apos normalizar — confira se sao CPFs validos antes de migrar.';
+    $warnings[] = count($wronglen) . ' registro(s) de origem nao tem 11 digitos apos normalizar. ' .
+        'Confira se sao CPFs validos antes de migrar.';
 }
 
 if ($conflicts) {
@@ -189,7 +193,8 @@ if ($conflicts) {
     if (count($conflicts) > 20) {
         cli_writeln('    ... e mais ' . (count($conflicts) - 20) . '.');
     }
-    $warnings[] = count($conflicts) . ' usuario(s) tem valor diferente no campo de destino — migrate_cpf.php vai SOBRESCREVER com o valor de origem.';
+    $warnings[] = count($conflicts) . ' usuario(s) tem valor diferente no campo de destino. ' .
+        'migrate_cpf.php vai SOBRESCREVER com o valor de origem.';
 }
 
 // 4. Resumo final.
