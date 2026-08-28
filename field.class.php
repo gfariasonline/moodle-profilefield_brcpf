@@ -103,6 +103,7 @@ class profile_field_brcpf extends profile_field_base {
      * @return string|null Digits-only CPF or null if input was null.
      */
     public function edit_save_data_preprocess($data, $datarecord) {
+        unset($datarecord);
         if ($data === null) {
             return null;
         }
@@ -140,7 +141,7 @@ class profile_field_brcpf extends profile_field_base {
         $sql = "SELECT uid.data
                   FROM {user_info_data} uid
                   JOIN {user_info_field} uif ON uid.fieldid = uif.id
-                 WHERE uif.datatype = 'cpf'
+                 WHERE uif.datatype = 'brcpf'
                    AND uid.userid <> :userid";
 
         foreach ($DB->get_fieldset_sql($sql, ['userid' => $userid]) as $existing) {

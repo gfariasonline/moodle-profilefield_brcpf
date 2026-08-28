@@ -73,7 +73,7 @@ class provider implements
         $params = [
             'userid' => $userid,
             'contextlevel' => CONTEXT_USER,
-            'datatype' => 'cpf',
+            'datatype' => 'brcpf',
         ];
         $contextlist = new contextlist();
         $contextlist->add_from_sql($sql, $params);
@@ -99,7 +99,7 @@ class provider implements
                    AND uif.datatype = :datatype";
         $userlist->add_from_sql('userid', $sql, [
             'userid' => $context->instanceid,
-            'datatype' => 'cpf',
+            'datatype' => 'brcpf',
         ]);
     }
 
@@ -174,7 +174,7 @@ class provider implements
             'user_info_data',
             "fieldid IN (SELECT id FROM {user_info_field} WHERE datatype = :datatype)
              AND userid = :userid",
-            ['userid' => $userid, 'datatype' => 'cpf']
+            ['userid' => $userid, 'datatype' => 'brcpf']
         );
     }
 
@@ -192,6 +192,6 @@ class provider implements
                   JOIN {user_info_field} uif ON uda.fieldid = uif.id
                  WHERE uda.userid = :userid
                    AND uif.datatype = :datatype";
-        return $DB->get_records_sql($sql, ['userid' => $userid, 'datatype' => 'cpf']);
+        return $DB->get_records_sql($sql, ['userid' => $userid, 'datatype' => 'brcpf']);
     }
 }

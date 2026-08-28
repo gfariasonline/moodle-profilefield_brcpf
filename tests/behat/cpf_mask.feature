@@ -7,7 +7,7 @@ Feature: CPF profile field masking
   Background:
     Given the following "custom profile fields" exist:
       | datatype | shortname | name | visible | param1 |
-      | cpf      | cpf       | CPF  | 2       | 1      |
+      | brcpf    | cpf       | CPF  | 2       | 1      |
     And the following "users" exist:
       | username | firstname | lastname | email                |
       | cpfuser  | CPF       | User     | cpfuser@example.com |
