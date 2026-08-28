@@ -17,7 +17,7 @@
  * CPF input masking using Cleave.js.
  *
  * @module     profilefield_cpf/cpf_mask
- * @copyright  2026 GFarias <dev@gfarias.com.br>
+ * @copyright  2026 Thiago Serrao
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

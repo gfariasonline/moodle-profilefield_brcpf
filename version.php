@@ -18,7 +18,7 @@
  * Version metadata for the profilefield_cpf plugin.
  *
  * @package   profilefield_cpf
- * @copyright 2014 onwards Willian Mano {@link http://willianmano.net}
+ * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

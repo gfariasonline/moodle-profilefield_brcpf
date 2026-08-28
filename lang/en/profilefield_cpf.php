@@ -18,12 +18,13 @@
  * Strings for component 'profilefield_cpf', language 'en'.
  *
  * @package   profilefield_cpf
- * @copyright 2014 onwards Willian Mano {@link http://willianmano.net}
+ * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['cpfexists']       = 'CPF already exists';
 $string['invalidcpf']      = 'Invalid CPF';
 $string['pluginname']      = 'CPF input';
+$string['requirevalidation'] = 'Require CPF validation';
 $string['privacy:metadata'] = 'The CPF profile field plugin does not store any personal data itself; '
                             . 'CPF values are stored by the core user profile subsystem.';

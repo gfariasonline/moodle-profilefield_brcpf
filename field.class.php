@@ -18,7 +18,7 @@
  * CPF profile field class definition.
  *
  * @package   profilefield_cpf
- * @copyright 2014 onwards Willian Mano {@link http://willianmano.net}
+ * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -26,7 +26,7 @@
  * CPF profile field — renders and validates the CPF input in the user profile form.
  *
  * @package   profilefield_cpf
- * @copyright 2014 onwards Willian Mano {@link http://willianmano.net}
+ * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class profile_field_cpf extends profile_field_base {
@@ -83,7 +83,7 @@ class profile_field_cpf extends profile_field_base {
             return $errors;
         }
 
-        if (!$this->validate_cpf($cpf)) {
+        if ($this->requires_validation() && !$this->validate_cpf($cpf)) {
             $errors[$this->inputname] = get_string('invalidcpf', 'profilefield_cpf');
             return $errors;
         }
@@ -183,6 +183,17 @@ class profile_field_cpf extends profile_field_base {
         }
 
         return true;
+    }
+
+    /**
+     * Returns whether mathematical CPF validation is enabled for this field.
+     * Empty legacy settings are treated as enabled to preserve current behavior.
+     *
+     * @return bool True when CPF validation is required.
+     */
+    private function requires_validation() {
+        return !isset($this->field->param1) || $this->field->param1 === ''
+            || (int)$this->field->param1 !== 0;
     }
 
     /**

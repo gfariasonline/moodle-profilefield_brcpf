@@ -18,7 +18,7 @@
  * Privacy API implementation for the profilefield_cpf plugin.
  *
  * @package   profilefield_cpf
- * @copyright 2014 onwards Willian Mano {@link http://willianmano.net}
+ * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -30,7 +30,7 @@ namespace profilefield_cpf\privacy;
  * holds no personal data.
  *
  * @package   profilefield_cpf
- * @copyright 2014 onwards Willian Mano {@link http://willianmano.net}
+ * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class provider implements \core_privacy\local\metadata\null_provider {

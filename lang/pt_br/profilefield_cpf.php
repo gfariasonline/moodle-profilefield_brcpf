@@ -18,12 +18,13 @@
  * Strings for component 'profilefield_cpf', language 'pt_br'.
  *
  * @package   profilefield_cpf
- * @copyright 2014 onwards Willian Mano {@link http://willianmano.net}
+ * @copyright  2026 Thiago Serrao
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['cpfexists']       = 'CPF já existe';
 $string['invalidcpf']      = 'CPF inválido';
 $string['pluginname']      = 'Campo de CPF';
+$string['requirevalidation'] = 'Exige validação do CPF';
 $string['privacy:metadata'] = 'O plugin de campo de perfil CPF não armazena dados pessoais por conta própria; '
                             . 'os valores de CPF são armazenados pelo subsistema central de perfil de usuário do Moodle.';

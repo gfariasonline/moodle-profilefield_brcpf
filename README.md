@@ -16,11 +16,8 @@ This plugin was made to add possibility to add CPF field in the user profile for
 
 Moodle documentation about profilefields -> http://docs.moodle.org/26/en/User_profile_fields
 
-I recommend to insert a mask plugin to the CPF field. I did as follows:
-
-- Added the Jquery masked Input plugin -> http://digitalbush.com/projects/masked-input-plugin/
-- Added the follow code relative to the masked field into the selected theme file:
-> jQuery("#profilefield_cpf").mask("999.999.999-99");
+The plugin includes Cleave.js to format the CPF field automatically as
+`999.999.999-99` while the user types.
 
 Para Brasileiros
 ---
@@ -29,10 +26,8 @@ Este plugin foi criado para possibilitar a inclusão do campo cpf nos formulári
 
 Documentação de como utilizar os profilefields -> http://docs.moodle.org/26/en/User_profile_fields
 
-Recomendo inserir um plugin de máscara para o campo CPF. Eu fiz da seguinte forma:
-- Adicionei o plugin Jquery masked Input -> http://digitalbush.com/projects/masked-input-plugin/
-- Adicionei o seguinte código referente à mascara do campo no tema utilizado:
-> jQuery("#profilefield_cpf").mask("999.999.999-99");
+O plugin inclui o Cleave.js e formata automaticamente o campo CPF como
+`999.999.999-99` enquanto o usuário digita.
 
 Installation
 ---
@@ -49,6 +44,6 @@ License
 It is released as GPL v3.
 
 Authors:
-* Willian Mano - http://willianmano.net
+* Thiago Serrao
 
-Copyright 2014 onwards Willian Mano (http://willianmano.net)
+Copyright 2026 Thiago Serrao
